@@ -70,7 +70,7 @@ Omni.Click = function(inValue, inChannel)
 	Omni.Track({
 		pe:"lnk_o",
 		ch:inChannel,
-		events:"event36,event40"
+		events:"event36,event40",
 		c31:inValue,
 		v31:inValue
 	});
