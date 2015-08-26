@@ -95,7 +95,7 @@ DataSnake.Methods.Init = function()
 	
 	$(document).click(function(e)
 	{
-		var href = $(e.target).parentsUntil("a").parent().attr("href");
+		var href = $(e.target).closest("a").attr("href");
 		
 		if(href === undefined)
 			return false;
