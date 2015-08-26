@@ -57,7 +57,7 @@ Omni.Model = {
 	bh:(window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight),		
 	t:Omni.Time.Timestamp
 };
-Omni.Endpoint = "http://nasrecruitment.d2.sc.omtrdc.net/b/ss/nasrdtmstaging/1/JS-1.5.1-D56N";
+Omni.Endpoint = "http://nasrecruitment.d2.sc.omtrdc.net/b/ss/nasrtestingsuite/1/JS-1.5.1-D56N";
 Omni.Element = document.createElement("img");
 document.getElementsByTagName("body")[0].appendChild(Omni.Element);
 Omni.Track = function(inObj)
