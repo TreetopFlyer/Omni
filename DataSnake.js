@@ -36,14 +36,18 @@ DataSnake.Methods.QueryStringToObject = function(inQueryString)
 DataSnake.Methods.GetDomain = function(inURL)
 {
 	var i;
-	var parts = inURL.split("/");
+	var parts;
 	var domain = window.location.host;
-	for(i=0; i<parts.length; i++)
+	if(inURL != "")
 	{
-		if(parts[i] == "")
+		parts = inURL.split("/");
+		for(i=0; i<parts.length; i++)
 		{
-			domain = parts[i+1];
-			break;
+			if(parts[i] == "")
+			{
+				domain = parts[i+1];
+				break;
+			}
 		}
 	}
 	return domain.toLowerCase();
