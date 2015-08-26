@@ -105,7 +105,7 @@ DataSnake.Methods.Init = function()
 		var parts = href.split("#");
 		var anchor = "";
 		if(parts.length > 1)
-			anchor = parts[1];
+			anchor = "#"+parts[1];
 		if(parts[0].indexOf("?") != -1)
 			parts[0] += "&";
 		else
