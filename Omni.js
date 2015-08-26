@@ -23,7 +23,7 @@ Omni.Time.Update = function()
 	}
 	Omni.Time.Timestamp = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear() + " " + hours + ":" + minutes + ":" + date.getSeconds() + " " + date.getDay() + " " + date.getTimezoneOffset();
 	Omni.Time.Clock = clockHours + ":" + minutes + clockHalf;
-	Omni.Time.Weekday = Omni.Time.Table.Days[date.getDay()];
+	Omni.Time.Day = Omni.Time.Table.Days[date.getDay()];
 	Omni.Time.Weekend = Omni.Time.Table.Weekend[date.getDay()];
 }
 Omni.Time.Update();
@@ -64,6 +64,39 @@ Omni.Track = function(inObj)
 {
 	Omni.Element.src = Omni.Endpoint + "/s" + Math.floor(Math.random()*10000000) + "?" + Omni.QueryString(Omni.Model) + Omni.QueryString(inObj);
 };
+
+Omni.Click = function(inValue, inChannel)
+{
+	Omni.Track({
+		pe:"lnk_o",
+		ch:inChannel,
+		events:"event36,event40"
+		c31:inValue,
+		v31:inValue
+	});
+};
+Omni.View = function(inTitle, inType, inLang)
+{
+	Omni.Track({
+		pageType:inType,
+		c3:"291010",
+		v3:"291010",
+		c8:"0",
+		v8:"0",
+		c17:Omni.Time.Clock,
+		v17:Omni.Time.Clock,
+		c18:Omni.Time.Day,
+		v18:Omni.Time.Day,
+		c19:Omni.Time.Weekend,
+		v19:Omni.Time.Weekend,
+		c28:inType,
+		v28:inType,
+		c30:inTitle,
+		c47:inLang,
+		v47:inLang
+	});
+};
+
 /* click properties
 pe:lnk_o
 pev2:Branch Click Speed Test
