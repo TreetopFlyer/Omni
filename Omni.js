@@ -62,7 +62,13 @@ Omni.Element = document.createElement("img");
 document.getElementsByTagName("body")[0].appendChild(Omni.Element);
 Omni.Track = function(inObj)
 {
-	Omni.Element.src = Omni.Endpoint + "/s" + Math.floor(Math.random()*10000000) + "?" + Omni.QueryString(Omni.Model) + Omni.QueryString(inObj);
+	var queryString = "?";
+	queryString += Omni.QueryString(Omni.Model);
+	queryString += Omni.QueryString(inObj);
+	
+	console.log(queryString);
+	
+	Omni.Element.src = Omni.Endpoint + "/s" + Math.floor(Math.random()*10000000) + queryString;
 };
 
 Omni.Click = function(inValue, inChannel)
