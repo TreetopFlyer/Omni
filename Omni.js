@@ -64,3 +64,33 @@ Omni.Track = function(inObj)
 {
 	Omni.Element.src = Omni.Endpoint + "/s" + Math.floor(Math.random()*10000000) + "?" + Omni.QueryString(Omni.Model) + Omni.QueryString(inObj);
 };
+/* click properties
+pe:lnk_o
+pev2:Branch Click Speed Test
+ch:test25
+events:event36,event40
+c31:Customer Service careers at Springleaf
+v31:D=c31
+*/
+
+
+/* view properties
+server:%Server%
+pageType:Career
+c3:291010
+v3:D=c3
+c8:0
+v8:D=c8
+c16:%Percent Page Viewed%
+c17:10:00AM
+v17:D=c17
+c18:Wednesday
+v18:D=c18
+c19:Weekday
+v19:D=c19
+c28:Career
+v28:D=c28
+c30:Career.Who We Hire
+c47:en-US
+v47:D=c47
+*/
