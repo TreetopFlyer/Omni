@@ -65,9 +65,6 @@ Omni.Track = function(inObj)
 	var queryString = "?";
 	queryString += Omni.QueryString(Omni.Model);
 	queryString += Omni.QueryString(inObj);
-	
-	console.log(queryString);
-	
 	Omni.Element.src = Omni.Endpoint + "/s" + Math.floor(Math.random()*10000000) + queryString;
 };
 
