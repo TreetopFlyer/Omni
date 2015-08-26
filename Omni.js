@@ -31,9 +31,9 @@ Omni.QueryString = function(inObj)
 {
 	var queryString = "";
 	var value;
-	for(prop in Omni.Model)
+	for(prop in inObj)
 	{
-		value = Omni.Model[prop];
+		value = inObj[prop];
 		if(value !== undefined)
 			queryString += prop + "="+ value + "&";
 	}
