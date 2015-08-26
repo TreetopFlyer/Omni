@@ -101,13 +101,17 @@ DataSnake.Methods.Init = function()
 			return false;
 		else
 			e.preventDefault();
-			
-		if(href.indexOf("?") != -1)
-			href += "&";
+		
+		var parts = href.split("#");
+		var anchor = "";
+		if(parts.length > 1)
+			anchor = parts[1];
+		if(parts[0].indexOf("?") != -1)
+			parts[0] += "&";
 		else
-			href += "?";
+			parts[0] += "?";
 			
-		window.location = href + DataSnake.Config.Key + "=" + encodeURIComponent(DataSnake.Data.Value);
+		window.location = parts[0] + DataSnake.Config.Key + "=" + encodeURIComponent(DataSnake.Data.Value) + anchor;
 		
 		return false;
 	});
